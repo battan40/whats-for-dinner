@@ -1,10 +1,33 @@
+<!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>What's For Dinner</title>
   </head>
   <body>
-    
+    <nav class="top-navigation-bar">
+      <a class="inactive"><b>What's for Dinner?</b></a>
+      <button class="button-add-recipe">Add Recipe</button>
+    </nav>
+   <h1 class="container">
+    <ul class="radio-button-box">
+      <form action="file:///Users/angelabattillo/turing-projects/whats-for-dinner-project/whats-for-dinner/index.html">
+       <p> What are you looking for?
+        <br/>
+        <input type="radio" id="side" name="dinner" value="side"> <label for='side'>Side</label><br> <checked/>
+
+        <input type="radio" id="main-dish" name="dinner" value="main-Dish"> <label for='side'>Main Dish</label><br>
+        <input type="radio" id="dessert" name="dinner" value="dessert" <label for='side'>Dessert</label><br>
+        <input type="radio" id="entire-meal" name="dinner" value="entire-meal" <label for='side'>Entire Meal</label><br>
+        <button class="let's-cook-!">Let's Cook!</button>
+       </p>
+      </form>
+    </ul>
+
+    <div draggable="true"><img src="assets/cookpot.svg" alt="a crockpot with a lid that will disappear and be replaced by the meal the user is given" width=100vw/></div>
+
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>
