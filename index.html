@@ -9,7 +9,7 @@
   <body>
     <nav class="top-navigation-bar">
       <a class="inactive"><b>What's for Dinner?</b></a>
-      <button class="button-add-recipe">Add Recipe</button>
+      <button class="button-add-recipe round">Add Recipe</button>
     </nav>
    <h1 class="container">
     <ul class="radio-button-box">
@@ -17,17 +17,18 @@
        <p> What are you looking for?
         <br/>
         <input type="radio" id="side" name="dinner" value="side"> <label for='side'>Side</label><br> <checked/>
-
         <input type="radio" id="main-dish" name="dinner" value="main-Dish"> <label for='side'>Main Dish</label><br>
         <input type="radio" id="dessert" name="dinner" value="dessert" <label for='side'>Dessert</label><br>
         <input type="radio" id="entire-meal" name="dinner" value="entire-meal" <label for='side'>Entire Meal</label><br>
-        <button class="let's-cook-!">Let's Cook!</button>
-       </p>
+        <button class="lets-cook-! round">Let's Cook!</button>
+      </p>
       </form>
     </ul>
-
-    <div draggable="true"><img src="assets/cookpot.svg" alt="a crockpot with a lid that will disappear and be replaced by the meal the user is given" width=100vw/></div>
-
+    <article draggable="true"><img src="assets/cookpot.svg" alt="a crockpot with a lid that will disappear and be replaced by the meal the user is given" width=100vw/>
+      <p type="text" class="you-should-make hidden">You should make:</p>
+      <h2 type="text" class="random-meal-appears-here hidden">Random Meal Text Here</h2>
+      <button type="text" class="clear hidden round">CLEAR</button>
+    </article>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>
