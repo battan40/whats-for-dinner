@@ -81,12 +81,17 @@ p {
   justify-content: space-around;
   flex-direction: column;
   font-size: 15px;
+
 }
-p span {
+.highlight {
+  display: flex;
+  color: #ff0000
+}
+/* p span {
   display: flex-end;
   color: #FF0000;
   size: 10px;
-}
+} */
 /* #red {
   content: "\002A";
 } */
