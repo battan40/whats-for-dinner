@@ -4,12 +4,12 @@ var sideRadioButton = document.querySelector('#side');
 var mainDishRadioButton = document.querySelector('#main-dish');
 var dessertRadioButton = document.querySelector('#dessert')
 var entireMealRadioButton = document.querySelector('#entire-meal');
-
 var letsCookButton = document.querySelector('.lets-cook');
 var whatAreYouLookingFor = document.querySelector('.what-are-you-looking-for');
 var crockpotView = document.querySelector('.crockpot-view');
 var youShouldMakeView = document.querySelector('.you-should-make');
 var randomDish = document.querySelector('.random-meal-appears-here');
+var clearViewButton = document.querySelector('.clear-view');
 
 //Global Variable:
 var choice = '';
@@ -17,8 +17,10 @@ var userChoice;
 
 //Event Listeners:
 letsCookButton.addEventListener('click', youShouldMake);
+clearViewButton.addEventListener('click', goHome)
+window.addEventListener('load', goHome);
 
-//functions:
+//Functions:
 function youShouldMake() {
   event.preventDefault();
   youShouldMakeView.classList.remove('hidden')
@@ -47,13 +49,15 @@ function choiceDessert() {
   return desserts[getRandomIndex(desserts)]+ '!';
 }
 function bringMealTogether(){
-  randomDish.innerHTML = `<h3 class="text">For dinner tonight ${sides[getRandomIndex(sides)]}, ${mainDishes[getRandomIndex(mainDishes)]}, ${desserts[getRandomIndex(desserts)]}</h3>`
+  randomDish.innerHTML = `<h3 class="text">For dinner tonight ${sides[getRandomIndex(sides)]}, ${mainDishes[getRandomIndex(mainDishes)]}, ${desserts[getRandomIndex(desserts)]}!</h3>`
 }
-
-function clearMealSelection(){
-}
-
 function goHome(){
+  event.preventDefault();
+  youShouldMakeView.classList.add('hidden')
+  randomDish.classList.add('hidden')
+  crockpotView.classList.remove('hidden')
+}
+function clearMealSelection(){
 }
 
 //Arrays:

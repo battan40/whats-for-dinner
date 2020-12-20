@@ -8,28 +8,33 @@
   </head>
   <body>
     <nav class="top-navigation-bar">
-      <a class="inactive"><b>What's for Dinner?</b></a>
+      <div class="inactive"><b>What's for Dinner?</b></div>
       <button class="button-add-recipe round">Add Recipe</button>
     </nav>
-   <h1 class="container">
+    <div class="container">
     <ul class="radio-button-box">
       <form action="file:///Users/angelabattillo/turing-projects/whats-for-dinner-project/whats-for-dinner/index.html">
-       <p class="what-are-you-looking-for">What are you looking for?<span class="highlight"><sup>*</sup></span>
-        <br/>
-        <input type="radio" id="side" name="dinner" value="side"> <label for='side'>Side</label><br> <checked/>
-        <input type="radio" id="main-dish" name="dinner" value="main-Dish"> <label for='side'>Main Dish</label><br>
-        <input type="radio" id="dessert" name="dinner" value="dessert" <label for='side'>Dessert</label><br>
-        <input type="radio" id="entire-meal" name="dinner" value="entire-meal" <label for='side'>Entire Meal</label><br>
-        <button class="lets-cook round">Let's Cook!</button>
-      </p>
+      <p class="what-are-you-looking-for">What are you looking for?<span class="highlight"><sup>*</sup></span>
+          <br/>
+         <input class="check-here" type="radio" id="side" name="dinner" value="side">
+         <label class="meal-type" for='side'>Side</label><br> <checked/>
+          <input class="check-here" type="radio" id="main-dish" name="dinner" value="main-Dish">
+          <label class="meal-type" for='side'>Main Dish</label><br>
+          <input class="check-here" type="radio" id="dessert" name="dinner" value="dessert">
+          <label class="meal-type" for='side'>Dessert</label><br>
+          <input class="check-here" type="radio" id="entire-meal" name="dinner" value="entire-meal">
+         <label class="meal-type" for='side'>Entire Meal</label><br>
+         <button class="lets-cook round">Let's Cook!</button>
+        </p>
       </form>
     </ul>
     <article draggable="true"><img class="crockpot-view" src="assets/cookpot.svg" alt="a crockpot with a lid that will disappear and be replaced by the meal the user is given" width=100vw/>
-      <p type="text" class="you-should-make hidden">You should make:</p>
+      <p type="text" class="you-should-make hidden" id="directive"><i>You should make:</i></p>
       <h2 type="text" class="random-meal-appears-here hidden"></h2>
       <button type="text" class="clear-view hidden round">CLEAR</button>
     </article>
-    <h3 class="text hidden">For dinner tonight sides, maindishes, dessert</h3>
+    <h3 class="text hidden" id="complete">For dinner tonight sides, maindishes, dessert</h3>
+  </div>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>
