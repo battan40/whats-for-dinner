@@ -11,7 +11,6 @@ var crockpotView = document.querySelector('.crockpot-view');
 var youShouldMakeView = document.querySelector('.you-should-make');
 var randomDish = document.querySelector('.random-meal-appears-here');
 
-
 //Global Variable:
 var choice = '';
 var userChoice;
@@ -29,8 +28,10 @@ function youShouldMake() {
     randomDish.innerText = choiceSide()
   } else if (mainDishRadioButton.checked === true) {
       randomDish.innerText = choiceMainDish()
-  } else {
+  } else if (dessertRadioButton.checked === true){
       randomDish.innerText = choiceDessert()
+  } else {
+      bringMealTogether()
   }
 }
 function getRandomIndex(array){
@@ -44,6 +45,9 @@ function choiceMainDish() {
 }
 function choiceDessert() {
   return desserts[getRandomIndex(desserts)]+ '!';
+}
+function bringMealTogether(){
+  randomDish.innerHTML = `<h3 class="text">For dinner tonight ${sides[getRandomIndex(sides)]}, ${mainDishes[getRandomIndex(mainDishes)]}, ${desserts[getRandomIndex(desserts)]}</h3>`
 }
 
 function clearMealSelection(){
