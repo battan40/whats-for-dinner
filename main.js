@@ -1,5 +1,4 @@
 //Query Selectors:
-
 var addRecipeButton = document.querySelector('.button-add-recipe');
 var sideRadioButton = document.querySelector('#side');
 var mainDishRadioButton = document.querySelector('#main-dish');
@@ -21,7 +20,6 @@ var userChoice;
 letsCookButton.addEventListener('click', youShouldMake);
 
 //functions:
-
 function youShouldMake() {
   event.preventDefault();
   youShouldMakeView.classList.remove('hidden')
